@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Cuciin_Dekstop.Login;
+using Cuciin_Dekstop.Dashboard;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,9 +23,15 @@ namespace Cuciin_Dekstop
     /// </summary>
     public partial class MainWindow : MyWindow
     {
+        private Page loginFrame;
+        private Page dasboardFrame;
         public MainWindow()
         {
             InitializeComponent();
+            loginFrame = new LoginFrame();
+            dasboardFrame = new DashboardFrame();
+            mainFrame.Navigate(loginFrame);
         }
+
     }
 }

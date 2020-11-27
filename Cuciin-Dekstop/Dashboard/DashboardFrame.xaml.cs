@@ -18,7 +18,7 @@ namespace Cuciin_Dekstop.Dashboard
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class DashboardFrame : MyWindow
+    public partial class DashboardFrame : MyPage
     {
         public DashboardFrame()
         {
