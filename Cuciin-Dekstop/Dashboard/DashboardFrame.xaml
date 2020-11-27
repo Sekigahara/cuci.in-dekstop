@@ -15,7 +15,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="119,29,0,0" TextWrapping="Wrap" Text="Dashboard" VerticalAlignment="Top" Grid.Column="1"/>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="450" Stroke="Black" VerticalAlignment="Top" Width="125" Grid.ColumnSpan="2"/>
         <TextBlock HorizontalAlignment="Left" Margin="38,29,0,0" TextWrapping="Wrap" Text="CUCI-IN" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-        <Button Grid.ColumnSpan="2" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="23,69,0,0"/>
+        <Button x:Name="logout_btn" Grid.ColumnSpan="2" Content="LOGOUT" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="23,69,0,0" Click="logout_btn_Click"/>
 
     </Grid>
 </basic:MyPage>

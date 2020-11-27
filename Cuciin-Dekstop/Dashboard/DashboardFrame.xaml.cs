@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Velacro.UIElements.Basic;
+using Cuciin_Dekstop.Util;
+using Cuciin_Dekstop.Login;
 
 namespace Cuciin_Dekstop.Dashboard
 {
@@ -23,6 +25,13 @@ namespace Cuciin_Dekstop.Dashboard
         public DashboardFrame()
         {
             InitializeComponent();
+        }
+
+        private void logout_btn_Click(object sender, RoutedEventArgs e)
+        {
+            UtilProvider.getSession().logout();
+            UtilProvider.destroySession();
+            UtilProvider.getMainFrame().Navigate(new LoginFrame());
         }
     }
 }

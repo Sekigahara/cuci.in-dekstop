@@ -8,11 +8,15 @@ using System.Windows;
 using Velacro.Api;
 using Velacro.Basic;
 using Cuciin_Dekstop.Model;
+using Cuciin_Dekstop.Util;
 
 namespace Cuciin_Dekstop.Login
 {
     class LoginController : MyController
     {
+        private string SUCCESS_MESSAGE = "Login Success";
+        private string FAILED_MESSAGE = "Wrong Email or Password";
+
         public LoginController(IMyView _myView) : base(_myView)
         {
             
@@ -22,43 +26,36 @@ namespace Cuciin_Dekstop.Login
         {
             //MessageBox.Show(password);
 
-            var client = new ApiClient("http://127.0.0.1:8000/api/auth/");
+            ApiClient client = new ApiClient("http://127.0.0.1:8000/api/auth/");
             var request = new ApiRequestBuilder();
 
-            string token = "";
             var req = request
                 .buildHttpRequest()
                 .addParameters("username", username)
                 .addParameters("password", password)
                 .setEndpoint("login")
                 .setRequestMethod(HttpMethod.Post);
-            client.setOnSuccessRequest(setViewLoginStatus);
-            client.setOnFailedRequest(viewFailStatus);
             
             var response = await client.sendRequest(request.getApiRequestBundle());
-            User user = response.getParsedObject<User>();
 
-            client.setAuthorizationToken(user.getData().getToken());
-        }
-
-        private void setViewLoginStatus(HttpResponseBundle response)
-        {
-            string SUCCESS_MESSAGE = "Login Success";
-
-            if (response.getHttpResponseMessage().Content != null)
+            if (response.getHttpResponseMessage().ReasonPhrase.Equals("OK"))
             {
                 getView().callMethod("setLoginStatus", SUCCESS_MESSAGE);
+
+                User user = response.getParsedObject<User>();
+                client.setAuthorizationToken(user.getData().getToken());
+
+                UtilProvider.initSession(user, client);
+                getView().callMethod("redirectToDashboard");
             }
-        }
-
-        private void viewFailStatus(HttpResponseBundle response)
-        {
-            string FAILED_MESSAGE = "Wrong Email or Password";
-
-            if (response.getHttpResponseMessage().ReasonPhrase == "Unauthorized")
+            else if(response.getHttpResponseMessage().ReasonPhrase.Equals("Unauthorized"))
+            {
                 getView().callMethod("setLoginStatus", FAILED_MESSAGE);
+            }
             else
+            {
                 getView().callMethod("setLoginStatus", response.getHttpResponseMessage().ReasonPhrase);
+            }
         }
     }
 }

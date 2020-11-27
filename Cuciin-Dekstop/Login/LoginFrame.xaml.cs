@@ -15,6 +15,8 @@ using Velacro.UIElements.Basic;
 using Velacro.UIElements.Button;
 using Velacro.UIElements.TextBlock;
 using Velacro.UIElements.TextBox;
+using Cuciin_Dekstop.Dashboard;
+using Cuciin_Dekstop.Util;
 
 namespace Cuciin_Dekstop.Login
 {
@@ -68,6 +70,11 @@ namespace Cuciin_Dekstop.Login
                 statusTextBlock.setText(status);
                 
             });
+        }
+
+        public void redirectToDashboard()
+        {
+            UtilProvider.getMainFrame().Navigate(new DashboardFrame());
         }
     }
 }

@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Velacro.UIElements.Basic;
+using Cuciin_Dekstop.Util;
 
 namespace Cuciin_Dekstop
 {
@@ -24,12 +25,11 @@ namespace Cuciin_Dekstop
     public partial class MainWindow : MyWindow
     {
         private Page loginFrame;
-        private Page dasboardFrame;
         public MainWindow()
         {
             InitializeComponent();
             loginFrame = new LoginFrame();
-            dasboardFrame = new DashboardFrame();
+            UtilProvider.initMainFrame(mainFrame);
             mainFrame.Navigate(loginFrame);
         }
 
