@@ -14,9 +14,9 @@ namespace Cuciin_Dekstop.Util
         private static Session session;
         private static Frame mainFrame;
 
-        public static void initSession(User user, ApiClient client)
+        public static void initSession(User user, Owner owner, ApiClient client)
         {
-            session = new Session(user, client);
+            session = new Session(user, owner, client);
         }
 
         public static void initMainFrame(Frame frame)

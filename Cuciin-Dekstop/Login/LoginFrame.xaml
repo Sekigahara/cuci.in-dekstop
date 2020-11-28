@@ -1,17 +1,17 @@
-﻿<basic:MyPage  xmlns:basic="clr-namespace:Velacro.UIElements.Basic;assembly=Velacro" x:Class="Cuciin_Dekstop.Login.LoginFrame"
+﻿<basic:MyPage xmlns:basic="clr-namespace:Velacro.UIElements.Basic;assembly=Velacro" x:Class="Cuciin_Dekstop.Login.LoginFrame"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cuciin_Dekstop.Login"
         mc:Ignorable="d"
-        Title="Login" Height="450" Width="800">
+        Title="Login" Height="1080" Width="1920" FontSize="36">
     <Grid>
-        <TextBox x:Name="username_field" HorizontalAlignment="Left" Height="auto" Margin="224,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="344"/>
-        <TextBlock HorizontalAlignment="Left" Margin="224,100,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="228,185,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top"/>
-        <Button x:Name="login_button" Content="Login" HorizontalAlignment="Left" Margin="323,283,0,0" VerticalAlignment="Top" Width="144" Height="34"/>
-        <TextBox x:Name="password_field" HorizontalAlignment="Left" Height="auto" Margin="224,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="344"/>
-        <TextBlock x:Name="status_field" HorizontalAlignment="Left" Margin="224,356,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="344"/>
+        <TextBox x:Name="username_field" HorizontalAlignment="Left" Height="50" Margin="586,329,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="824"/>
+        <TextBlock HorizontalAlignment="Left" Margin="586,257,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" FontSize="40"/>
+        <TextBlock HorizontalAlignment="Left" Margin="599,437,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" FontSize="40"/>
+        <Button x:Name="login_button" Content="Login" HorizontalAlignment="Left" Margin="738,649,0,0" VerticalAlignment="Top" Width="526" Height="60"/>
+        <TextBox x:Name="password_field" HorizontalAlignment="Left" Height="50" Margin="586,513,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="824"/>
+        <TextBlock x:Name="status_field" HorizontalAlignment="Left" Margin="586,837,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="824" TextAlignment="Center"/>
     </Grid>
 </basic:MyPage>

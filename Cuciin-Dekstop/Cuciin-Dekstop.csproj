@@ -58,6 +58,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\DataOwner.cs" />
+    <Compile Include="Model\Owner.cs" />
     <Compile Include="Util\UtilProvider.cs" />
     <Page Include="Dashboard\DashboardFrame.xaml">
       <SubType>Designer</SubType>

@@ -12,11 +12,23 @@ namespace Cuciin_Dekstop.Util
     {
         private User user;
         private ApiClient client;
+        private Owner owner;
         
-        public Session(User user, ApiClient client)
+        public Session(User user , Owner owner, ApiClient client)
         {
             this.user = user;
             this.client = client;
+            this.owner = owner;
+        }
+
+        public void setOwner(Owner owner)
+        {
+            this.owner = owner;
+        }
+
+        public Owner getOwner()
+        {
+            return owner;
         }
 
         public void setUser(User user)
