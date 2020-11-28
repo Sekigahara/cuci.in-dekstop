@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Sekigahara\source\repos\Cuciin-Dekstop\Cuciin-Dekstop\obj\Debug\
+C:\Users\Sekigahara\source\repos\Cuciin-Dekstop\Cuciin-Dekstop\obj\Release\
 Cuciin_Dekstop
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\Sekigahara\source\repos\Cuciin-Dekstop\Cuciin-Dekstop\App.xaml
 3-533218444
 
-131235560247
-1181421526591
+14157981415
+141694670908
 Dashboard\DashboardFrame.xaml;Login\LoginFrame.xaml;MainWindow.xaml;
 
-False
+True
 

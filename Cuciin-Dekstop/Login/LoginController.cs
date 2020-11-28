@@ -43,7 +43,6 @@ namespace Cuciin_Dekstop.Login
                 getView().callMethod("setLoginStatus", SUCCESS_MESSAGE);
 
                 User user = response.getParsedObject<User>();
-                client.setAuthorizationToken(user.getData().getToken());
 
                 UtilProvider.initSession(user, client);
                 getView().callMethod("redirectToDashboard");
