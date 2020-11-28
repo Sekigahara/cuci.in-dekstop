@@ -25,10 +25,12 @@ namespace Cuciin_Dekstop.Dashboard
         public DashboardFrame()
         {
             InitializeComponent();
+            setController(new DashboardController(this));
         }
 
         private void logout_btn_Click(object sender, RoutedEventArgs e)
         {
+            getController().callMethod("OnLogout");
             UtilProvider.getSession().logout();
             UtilProvider.destroySession();
             UtilProvider.getMainFrame().Navigate(new LoginFrame());

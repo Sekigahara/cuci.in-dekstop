@@ -63,15 +63,6 @@ namespace Cuciin_Dekstop.Login
             getController().callMethod("OnLogin", username_field.Text, password_field.Text);
         }
 
-        public void setLoginStatus(string status)
-        {
-            this.Dispatcher.Invoke(() =>
-            {
-                statusTextBlock.setText(status);
-                
-            });
-        }
-
         public void redirectToDashboard()
         {
             UtilProvider.getMainFrame().Navigate(new DashboardFrame());
