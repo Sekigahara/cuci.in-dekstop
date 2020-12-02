@@ -13,6 +13,13 @@ namespace Cuciin_Dekstop.Util
     {
         private static Session session;
         private static Frame mainFrame;
+        private static Transaction dataTransaction;
+
+
+        public static void initDataTransaction(Transaction transaction)
+        {
+            dataTransaction = transaction;
+        }
 
         public static void initSession(User user, Owner owner, ApiClient client)
         {
@@ -29,9 +36,16 @@ namespace Cuciin_Dekstop.Util
             return session;
         }
 
+        public static Transaction getDataTransaction()
+        {
+            return dataTransaction;
+        }
+
         public static void destroySession()
         {
             session = null;
+            dataTransaction = null;
+            mainFrame = null;
         }
 
         public static Frame getMainFrame()

@@ -1,10 +1,12 @@
-﻿using Cuciin_Dekstop.Util;
+﻿using Cuciin_Dekstop.Model;
+using Cuciin_Dekstop.Util;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using Velacro.Api;
 using Velacro.Basic;
 
@@ -17,9 +19,32 @@ namespace Cuciin_Dekstop.Dashboard
 
         }
 
+        public async void generateTransactionData()
+        {
+            ApiClient client = UtilProvider.getSession().getClient();
+            var request = new ApiRequestBuilder();
+
+            var req = request
+                      .buildHttpRequest()
+                      .setEndpoint("transaction")
+                      .setRequestMethod(HttpMethod.Get);
+            client.setAuthorizationToken(UtilProvider.getSession().getUser().getData().getToken());
+            var response = await client.sendRequest(request.getApiRequestBundle());
+
+            if (response.getHttpResponseMessage().ReasonPhrase.Equals("OK"))
+            {
+                Transaction transaction = response.getParsedObject<Transaction>();
+                cleanData(transaction);
+            }
+            else
+            {
+                MessageBox.Show(response.getHttpResponseMessage().ReasonPhrase);
+            }
+        }
+
         public async void OnLogout()
         {
-            ApiClient client = new ApiClient("http://127.0.0.1:8000/api/auth/");
+            ApiClient client = UtilProvider.getSession().getClient();
             var request = new ApiRequestBuilder();
 
             var req= request
@@ -29,6 +54,31 @@ namespace Cuciin_Dekstop.Dashboard
             client.setAuthorizationToken(UtilProvider.getSession().getUser().getData().getToken());
 
             var response = await client.sendRequest(request.getApiRequestBundle());
+        }
+
+        private void cleanData(Transaction transaction)
+        {
+            for(int i = 0; i < transaction.getData().Count; i++)
+            {
+                if(transaction.getData().ElementAt(i).getStatus() == null)
+                {
+                    transaction.getData().ElementAt(i).setStatus("Calculating");
+                }
+
+                Double? amount = transaction.getData().ElementAt(i).getAmount();
+                double? price = transaction.getData().ElementAt(i).getPrice();
+                if (amount == null)
+                {
+                    transaction.getData().ElementAt(i).setAmount(0);
+                }
+                if(price == null)
+                {
+                    transaction.getData().ElementAt(i).setPrice(0.0);
+                }
+            }
+
+            UtilProvider.initDataTransaction(transaction); UtilProvider.initDataTransaction(transaction);
+            getView().callMethod("generateChart");
         }
     }
 }
