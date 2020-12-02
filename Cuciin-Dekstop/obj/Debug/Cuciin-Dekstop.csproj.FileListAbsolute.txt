@@ -27,3 +27,5 @@ C:\Users\Sekigahara\source\repos\Cuciin-Dekstop\Cuciin-Dekstop\obj\Debug\Cuciin-
 C:\Users\Sekigahara\source\repos\Cuciin-Dekstop\Cuciin-Dekstop\obj\Debug\Cuciin-Dekstop.exe
 C:\Users\Sekigahara\source\repos\Cuciin-Dekstop\Cuciin-Dekstop\obj\Debug\Cuciin-Dekstop.pdb
 C:\Users\Sekigahara\source\repos\Cuciin-Dekstop\Cuciin-Dekstop\obj\Debug\Cuciin-Dekstop.csprojAssemblyReference.cache
+C:\Users\Sekigahara\source\repos\Cuciin-Dekstop\Cuciin-Dekstop\obj\Debug\History\HistoryFrame.g.cs
+C:\Users\Sekigahara\source\repos\Cuciin-Dekstop\Cuciin-Dekstop\obj\Debug\History\HistoryFrame.baml

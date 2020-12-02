@@ -58,10 +58,25 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="History\HistoryController.cs" />
+    <Compile Include="History\HistoryFrame.xaml.cs">
+      <DependentUpon>HistoryFrame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\UserCredentialData.cs" />
+    <Compile Include="Model\UserCredential.cs" />
+    <Compile Include="Model\HistoryData.cs" />
+    <Compile Include="Model\DataTransaction.cs" />
+    <Compile Include="Model\Transaction.cs" />
+    <Compile Include="Model\Outlet.cs" />
+    <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\DataOwner.cs" />
     <Compile Include="Model\Owner.cs" />
     <Compile Include="Util\UtilProvider.cs" />
     <Page Include="Dashboard\DashboardFrame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="History\HistoryFrame.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
