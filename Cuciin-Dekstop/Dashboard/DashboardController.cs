@@ -24,9 +24,10 @@ namespace Cuciin_Dekstop.Dashboard
             ApiClient client = UtilProvider.getSession().getClient();
             var request = new ApiRequestBuilder();
 
+            String URL = "transaction/owner/" + UtilProvider.getSession().getUser().getData().getId();
             var req = request
                       .buildHttpRequest()
-                      .setEndpoint("transaction")
+                      .setEndpoint(URL)
                       .setRequestMethod(HttpMethod.Get);
             client.setAuthorizationToken(UtilProvider.getSession().getUser().getData().getToken());
             var response = await client.sendRequest(request.getApiRequestBundle());
@@ -66,7 +67,7 @@ namespace Cuciin_Dekstop.Dashboard
                 }
 
                 Double? amount = transaction.getData().ElementAt(i).getAmount();
-                double? price = transaction.getData().ElementAt(i).getPrice();
+                Double? price = transaction.getData().ElementAt(i).getPrice();
                 if (amount == null)
                 {
                     transaction.getData().ElementAt(i).setAmount(0);

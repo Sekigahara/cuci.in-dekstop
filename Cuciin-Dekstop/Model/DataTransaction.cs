@@ -14,12 +14,12 @@ namespace Cuciin_Dekstop.Model
         public Double? price { get; set; }
         public Double? amount { get; set; }
         public string laundry_type { get; set; }
-        public String status { get; set; }
+        public string status { get; set; }
         public int customer_id { get; set; }
         public int outlet_id { get; set; }
-        public String created_at { get; set; }
-        public String updated_at { get; set; }
-        public String deleted_at { get; set; }
+        public DateTime created_at { get; set; }
+        public DateTime updated_at { get; set; }
+        public DateTime? deleted_at { get; set; }
         public Customer customer { get; set; }
         public Outlet outlet { get; set; }
 
@@ -92,7 +92,7 @@ namespace Cuciin_Dekstop.Model
             return outlet_id;
         }
 
-        public String getCreatedAt()
+        public DateTime getCreatedAt()
         {
             return created_at;
         }
