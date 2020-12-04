@@ -29,7 +29,7 @@ namespace Cuciin_Dekstop.History
             for (int i = 0; i < data.Count(); i++)
             {
                 String po_number = data.ElementAt(i).getPoNumber();
-                String date = data.ElementAt(i).getCreatedAt();
+                DateTime date = data.ElementAt(i).getCreatedAt();
                 Double amount = data.ElementAt(i).getAmount().GetValueOrDefault();
 
                 ApiClient client = UtilProvider.getSession().getClient();
