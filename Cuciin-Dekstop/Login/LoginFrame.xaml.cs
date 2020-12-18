@@ -67,5 +67,10 @@ namespace Cuciin_Dekstop.Login
         {
             UtilProvider.getMainFrame().Navigate(new DashboardFrame());
         }
+
+        private void login_button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

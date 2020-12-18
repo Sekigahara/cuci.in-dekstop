@@ -5,13 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cuciin_Dekstop.Login"
         mc:Ignorable="d"
-        Title="Login" Height="1080" Width="1920" FontSize="36">
+        Title="Login" 
+        FontSize="36">
     <Grid>
-        <TextBox x:Name="username_field" HorizontalAlignment="Left" Height="50" Margin="586,329,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="824"/>
-        <TextBlock HorizontalAlignment="Left" Margin="586,257,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" FontSize="40"/>
-        <TextBlock HorizontalAlignment="Left" Margin="599,437,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" FontSize="40"/>
-        <Button x:Name="login_button" Content="Login" HorizontalAlignment="Left" Margin="738,649,0,0" VerticalAlignment="Top" Width="526" Height="60"/>
-        <TextBox x:Name="password_field" HorizontalAlignment="Left" Height="50" Margin="586,513,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="824"/>
+        <TextBox x:Name="username_field"  HorizontalAlignment="Left" Height="34" Margin="764,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="478" BorderBrush="{x:Null}" Foreground="#FFB2B2B2" FontSize="24" SelectionBrush="{x:Null}" Padding="35,-10,0,0" Text="Username" >
+            <TextBox.Background>
+                <ImageBrush ImageSource="Group 173.png"/>
+            </TextBox.Background>
+        </TextBox>
+        <Button x:Name="login_button" Content="LOGIN" HorizontalAlignment="Left" Margin="780,493,0,0" VerticalAlignment="Top" Width="450" Height="50" Foreground="White" Click="login_button_Click" FontSize="22" Background="#FF034395">
+            <Button.BorderBrush>
+                <ImageBrush/>
+            </Button.BorderBrush>
+        </Button>
+        <TextBox x:Name="password_field" HorizontalAlignment="Left" Height="34" Margin="764,411,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="478" BorderBrush="{x:Null}" Foreground="#FFB2B2B2" FontSize="24" SelectionBrush="{x:Null}" Padding="35,-5,0,0" Text="Password">
+            <TextBox.Background>
+                <ImageBrush ImageSource="Group 174.png"/>
+            </TextBox.Background>
+        </TextBox>
         <TextBlock x:Name="status_field" HorizontalAlignment="Left" Margin="586,837,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="824" TextAlignment="Center"/>
+        <Image HorizontalAlignment="Left" Height="885" VerticalAlignment="Top" Width="657" Source="login.png"/>
+        <TextBlock Margin="720,175,0,0" TextWrapping="Wrap" Text="Login to Cuci-in" VerticalAlignment="Top" FontSize="55" Height="95" Width="563" Foreground="#FF034395" HorizontalAlignment="Left" TextAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Margin="136,292,0,0" TextWrapping="Wrap" Text="Hello, Friend!" VerticalAlignment="Top" Height="53" Width="314" TextAlignment="Center" FontSize="48" Foreground="White" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="116,365,0,0" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Center" FontSize="30"><Span Foreground="White"><Run Text="Enter your personal details"/></Span><LineBreak/><Run Foreground="White" Text="and start journey with us"/><LineBreak/><Span Foreground="White"><Run/></Span></TextBlock>
     </Grid>
 </basic:MyPage>
