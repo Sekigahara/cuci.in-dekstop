@@ -9,12 +9,12 @@ namespace Cuciin_Dekstop.Model
     class HistoryData
     {
         public String transaction_id { get; set; }
-        public String date { get; set; }
+        public DateTime date { get; set; }
         public String name { get; set; }
         public String phone { get; set; }
         public double amount { get; set; }
 
-        public HistoryData(String transaction_id, String date, String name, String phone, double amount)
+        public HistoryData(String transaction_id, DateTime date, String name, String phone, double amount)
         {
             this.transaction_id = transaction_id;
             this.date = date;
@@ -28,7 +28,7 @@ namespace Cuciin_Dekstop.Model
             return transaction_id;
         }
 
-        public String getDate()
+        public DateTime getDate()
         {
             return date;
         }

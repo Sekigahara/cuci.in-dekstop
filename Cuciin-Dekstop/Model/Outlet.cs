@@ -12,12 +12,12 @@ namespace Cuciin_Dekstop.Model
         public string name { get; set; }
         public string address { get; set; }
         public string phone { get; set; }
-        public double rating { get; set; }
+        public int rating { get; set; }
         public string laundry_type { get; set; }
         public string manhours { get; set; }
         public int owner_id { get; set; }
-        public String created_at { get; set; }
-        public String updated_at { get; set; }
-        public String deleted_at { get; set; }
+        public DateTime created_at { get; set; }
+        public DateTime updated_at { get; set; }
+        public object deleted_at { get; set; }
     }
 }
