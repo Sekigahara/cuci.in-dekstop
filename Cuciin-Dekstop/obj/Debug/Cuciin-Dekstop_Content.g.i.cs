@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("login/group%20174.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("historydetail/background_nav.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("historydetail/logo_cuciin.png")]
 
 

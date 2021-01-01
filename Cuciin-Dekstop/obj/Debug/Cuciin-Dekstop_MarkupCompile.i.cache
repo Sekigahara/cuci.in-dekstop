@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\Data Kuliah\Matkul\Semester 5\WPPL\Sprint 5\cuci.in-dekstop\Cuciin-Dekstop\obj\Debug\
+D:\Kuliah\Software\xampp\htdocs\cuci_in\cuci.in-dekstop\Cuciin-Dekstop\obj\Debug\
 Cuciin_Dekstop
 none
 false
 DEBUG;TRACE
-E:\Data Kuliah\Matkul\Semester 5\WPPL\Sprint 5\cuci.in-dekstop\Cuciin-Dekstop\App.xaml
-41004266922
+D:\Kuliah\Software\xampp\htdocs\cuci_in\cuci.in-dekstop\Cuciin-Dekstop\App.xaml
+51683046916
 
-251344360566
-142145639789
-Dashboard\DashboardFrame.xaml;History\HistoryFrame.xaml;Login\LoginFrame.xaml;MainWindow.xaml;
+29211168746
+15-599080234
+Dashboard\DashboardFrame.xaml;HistoryDetail\HistoryDetailFrame.xaml;History\HistoryFrame.xaml;Login\LoginFrame.xaml;MainWindow.xaml;
 
-False
+True
 
