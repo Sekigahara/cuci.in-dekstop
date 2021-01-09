@@ -8,7 +8,7 @@
         Title="Login" 
         FontSize="36">
     <Grid>
-        <TextBox x:Name="username_field"  HorizontalAlignment="Left" Height="34" Margin="764,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="478" BorderBrush="{x:Null}" Foreground="#FFB2B2B2" FontSize="24" SelectionBrush="{x:Null}" Padding="35,-10,0,0" Text="Username" >
+        <TextBox x:Name="username_field"  HorizontalAlignment="Left" Height="34" Margin="764,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="478" BorderBrush="{x:Null}" Foreground="#FFB2B2B2" FontSize="24" SelectionBrush="{x:Null}" Padding="35,-10,0,0">
             <TextBox.Background>
                 <ImageBrush ImageSource="Group 173.png"/>
             </TextBox.Background>
@@ -18,7 +18,7 @@
                 <ImageBrush/>
             </Button.BorderBrush>
         </Button>
-        <TextBox x:Name="password_field" HorizontalAlignment="Left" Height="34" Margin="764,411,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="478" BorderBrush="{x:Null}" Foreground="#FFB2B2B2" FontSize="24" SelectionBrush="{x:Null}" Padding="35,-5,0,0" Text="Password">
+        <TextBox x:Name="password_field" HorizontalAlignment="Left" Height="34" Margin="764,411,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="478" BorderBrush="{x:Null}" Foreground="#FFB2B2B2" FontSize="24" SelectionBrush="{x:Null}" Padding="35,-5,0,0">
             <TextBox.Background>
                 <ImageBrush ImageSource="Group 174.png"/>
             </TextBox.Background>

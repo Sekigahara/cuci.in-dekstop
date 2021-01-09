@@ -124,3 +124,6 @@ D:\Kuliah\Software\xampp\htdocs\cuci_in\cuci.in-dekstop\Cuciin-Dekstop\obj\Debug
 D:\Kuliah\Software\xampp\htdocs\cuci_in\cuci.in-dekstop\Cuciin-Dekstop\obj\Debug\HistoryDetail\HistoryDetailFrame.g.cs
 D:\Kuliah\Software\xampp\htdocs\cuci_in\cuci.in-dekstop\Cuciin-Dekstop\obj\Debug\HistoryDetail\HistoryDetailFrame.baml
 D:\Kuliah\Software\xampp\htdocs\cuci_in\cuci.in-dekstop\Cuciin-Dekstop\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Sekigahara\source\repos\Cuciin-Dekstop\Cuciin-Dekstop\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Sekigahara\source\repos\Cuciin-Dekstop\Cuciin-Dekstop\obj\Debug\HistoryDetail\HistoryDetailFrame.g.cs
+C:\Users\Sekigahara\source\repos\Cuciin-Dekstop\Cuciin-Dekstop\obj\Debug\HistoryDetail\HistoryDetailFrame.baml

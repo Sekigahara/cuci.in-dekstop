@@ -137,17 +137,17 @@
             <TextBlock 
                 x:Name="earning_text" 
                 HorizontalAlignment="Left" 
-                Margin="50,400,0,0" 
+                Margin="10,400,0,0" 
                 TextWrapping="Wrap" 
-                Text="Rp. 500000" 
+                Text="Rp. 0" 
                 VerticalAlignment="Top" 
                 FontSize="50" 
                 FontFamily="Lato"
                 Foreground="#0270FF"
                 FontWeight="Heavy"
                 FontStyle="Italic"
-                Height="79" 
-                Width="395"/>
+                Height="76" 
+                Width="479"/>
         </Grid>
         <Button 
             x:Name="history_btn_Copy" 
