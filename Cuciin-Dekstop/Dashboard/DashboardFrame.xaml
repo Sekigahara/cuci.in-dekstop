@@ -139,7 +139,7 @@
                 HorizontalAlignment="Left" 
                 Margin="10,400,0,0" 
                 TextWrapping="Wrap" 
-                Text="Rp. 500000" 
+                Text="Rp. 0" 
                 VerticalAlignment="Top" 
                 FontSize="50" 
                 FontFamily="Lato"

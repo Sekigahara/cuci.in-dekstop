@@ -16,6 +16,7 @@ using Velacro.UIElements.Basic;
 using Cuciin_Dekstop.Util;
 using Cuciin_Dekstop.Login;
 using Cuciin_Dekstop.Dashboard;
+using Cuciin_Dekstop.HistoryDetail;
 
 namespace Cuciin_Dekstop.History
 {
@@ -47,6 +48,12 @@ namespace Cuciin_Dekstop.History
         private void dashboard_btn_Click(object sender, RoutedEventArgs e)
         {
             UtilProvider.getMainFrame().Navigate(new DashboardFrame());
+        }
+
+        private void Row_DoubleClick(object sender, MouseButtonEventArgs s)
+        {
+            int currentIndex = data_grid_transaction.Items.IndexOf(data_grid_transaction.CurrentItem);
+            UtilProvider.getMainFrame().Navigate(new HistoryDetailFrame(currentIndex));
         }
     }
 }

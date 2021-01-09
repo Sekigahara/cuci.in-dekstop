@@ -45,7 +45,10 @@ namespace Cuciin_Dekstop.Model
 
         public Double? getPrice()
         {
-            return price;
+            if (price == null)
+                return 0;
+            else
+                return price;
         }
 
         public void setAmount(Double? amount)

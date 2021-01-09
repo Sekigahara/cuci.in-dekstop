@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,47 +22,53 @@ namespace Cuciin_Dekstop.History
 
         public async void generateData(DataGrid data_grid_transaction)
         {
-
-            List<DataTransaction> data = UtilProvider.getDataTransaction().getData();
-            List<HistoryData> dataHistory = new List<HistoryData>();
-
-            for (int i = 0; i < data.Count(); i++)
+            if(UtilProvider.getDataTransaction() != null)
             {
-                String po_number = data.ElementAt(i).getPoNumber();
-                DateTime date = data.ElementAt(i).getCreatedAt();
-                Double amount = data.ElementAt(i).getAmount().GetValueOrDefault();
+                List<DataTransaction> data = UtilProvider.getDataTransaction().getData();
+                List<HistoryData> dataHistory = new List<HistoryData>();
 
-                ApiClient client = UtilProvider.getSession().getClient();
-                var request = new ApiRequestBuilder();
-
-                String URL = "user/id/" + data.ElementAt(i).getCustomerId().ToString();
-                
-                var req = request
-                          .buildHttpRequest()
-                          .setEndpoint(URL)
-                          .setRequestMethod(HttpMethod.Get);
-                client.setAuthorizationToken(UtilProvider.getSession().getUser().getData().getToken());
-                var response = await client.sendRequest(request.getApiRequestBundle());
-
-                String name;
-                String phone;
-                
-                if (response.getHttpResponseMessage().ReasonPhrase.Equals("OK"))
+                for (int i = 0; i < data.Count(); i++)
                 {
-                    UserCredential userCredential = response.getParsedObject<UserCredential>();
-                    name = userCredential.getData().getFullName();
-                    phone = userCredential.getData().getPhone();
-                }
-                else
-                {
-                    //MessageBox.Show(response.getHttpResponseMessage().ReasonPhrase);
-                    phone = name = "unknown";
+                    String po_number = data.ElementAt(i).getPoNumber();
+                    DateTime date = data.ElementAt(i).getCreatedAt();
+                    Double amount = data.ElementAt(i).getAmount().GetValueOrDefault();
+
+                    ApiClient client = UtilProvider.getSession().getClient();
+                    var request = new ApiRequestBuilder();
+
+                    String URL = "user/id/" + data.ElementAt(i).getCustomerId().ToString();
+
+                    var req = request
+                              .buildHttpRequest()
+                              .setEndpoint(URL)
+                              .setRequestMethod(HttpMethod.Get);
+                    client.setAuthorizationToken(UtilProvider.getSession().getUser().getData().getToken());
+                    var response = await client.sendRequest(request.getApiRequestBundle());
+
+                    String name;
+                    String phone;
+
+                    if (response.getHttpResponseMessage().ReasonPhrase.Equals("OK"))
+                    {
+                        UserCredential userCredential = response.getParsedObject<UserCredential>();
+                        name = userCredential.getData().getFullName();
+                        phone = userCredential.getData().getPhone();
+                    }
+                    else
+                    {
+                        //MessageBox.Show(response.getHttpResponseMessage().ReasonPhrase);
+                        phone = name = "unknown";
+                    }
+
+                    dataHistory.Add(new HistoryData(po_number, date, name, phone, amount));
                 }
 
-                dataHistory.Add(new HistoryData(po_number, date, name, phone, amount));
+                data_grid_transaction.ItemsSource = dataHistory;
             }
-
-            data_grid_transaction.ItemsSource = dataHistory;
+            else
+            {
+                MessageBox.Show("Your Outlet never Have any Transaction History");
+            }
         }
 
         public async void OnLogout()

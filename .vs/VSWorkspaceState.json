@@ -2,9 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\Cuciin-Dekstop",
-    "\\Cuciin-Dekstop\\Dashboard",
-    "\\Cuciin-Dekstop\\Login"
+    "\\Cuciin-Dekstop\\History"
   ],
-  "SelectedNode": "\\Cuciin-Dekstop\\Dashboard\\DashboardFrame.xaml",
+  "SelectedNode": "\\Cuciin-Dekstop\\History\\HistoryFrame.xaml.cs",
   "PreviewInSolutionExplorer": false
 }

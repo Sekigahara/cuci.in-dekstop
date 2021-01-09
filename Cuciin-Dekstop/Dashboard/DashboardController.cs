@@ -39,7 +39,7 @@ namespace Cuciin_Dekstop.Dashboard
             }
             else
             {
-                MessageBox.Show(response.getHttpResponseMessage().ReasonPhrase);
+                MessageBox.Show("Your Outlet never Have any Transaction");
             }
         }
 
