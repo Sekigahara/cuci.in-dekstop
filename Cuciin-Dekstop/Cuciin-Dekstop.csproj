@@ -137,5 +137,17 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Login\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Login\Rectangle 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Login\Group 173.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Login\Group 174.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

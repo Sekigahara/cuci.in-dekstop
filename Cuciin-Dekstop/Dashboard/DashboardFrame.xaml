@@ -7,14 +7,187 @@
               mc:Ignorable="d"
         Title="Dashboard" Height="1080" Width="1920">
     <Grid>
-        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="1039" Stroke="Black" VerticalAlignment="Top" Width="237" Grid.ColumnSpan="2"/>
-        <TextBlock HorizontalAlignment="Left" Margin="49,59,0,0" TextWrapping="Wrap" Text="CUCI-IN" VerticalAlignment="Top" FontSize="36" Grid.ColumnSpan="2" Width="153"/>
-        <Button x:Name="logout_btn" Content="LOGOUT" HorizontalAlignment="Left" VerticalAlignment="Top" Width="237" Margin="0,329,0,0" Click="logout_btn_Click" Height="64" FontSize="30"/>
-        <linechart:LineChart x:Name="monthly_chart" Margin="324,155,609,0" Height="790" VerticalAlignment="Top"></linechart:LineChart>
-        <Button x:Name="dashboard_btn" Content="DASHBOARD" HorizontalAlignment="Left" VerticalAlignment="Top" Width="237" Margin="0,155,0,0" Height="63" FontSize="30" Click="dashboard_btn_Click"/>
-        <TextBox HorizontalAlignment="Left" Height="81" Margin="324,52,0,0" TextWrapping="Wrap" Text="Income Overview" VerticalAlignment="Top" Width="440" FontSize="50"/>
-        <TextBox HorizontalAlignment="Left" Height="81" Margin="1377,59,0,0" TextWrapping="Wrap" Text="Earning" VerticalAlignment="Top" Width="440" FontSize="50"/>
-        <TextBlock x:Name="earning_text" HorizontalAlignment="Left" Margin="1377,387,0,0" TextWrapping="Wrap" Text="Rp. 500000" VerticalAlignment="Top" FontSize="52" Height="79" Width="500"/>
-        <Button x:Name="history_btn_Copy" Content="HISTORY" HorizontalAlignment="Left" VerticalAlignment="Top" Width="237" Margin="0,240,0,0" Height="63" FontSize="30" Click="history_btn_Click"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="313*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle 
+            Fill="#F0F0F0" 
+            HorizontalAlignment="Left" 
+            Height="1080" 
+            VerticalAlignment="Top" 
+            Width="1920" Grid.ColumnSpan="2"/>
+        <Rectangle 
+            Fill="#034395" 
+            HorizontalAlignment="Left" 
+            Height="1080" 
+            VerticalAlignment="Top" 
+            Width="360"/>
+        <Button 
+            x:Name="logout_btn" 
+            Content="Logout" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Width="360" 
+            Margin="0,387,0,0" 
+            Click="logout_btn_Click" 
+            Height="64" 
+            FontSize="30"
+            FontFamily="Lato"
+            Background="{x:Null}"
+            Foreground="White"
+            BorderBrush="{x:Null}"
+            Opacity="0.7"/>
+        <Grid Margin="465,130,617,112">
+            <Border
+                BorderBrush="#707070"
+                BorderThickness="12"
+                CornerRadius="18">
+                <Border.Effect>
+                    <BlurEffect/>
+                </Border.Effect>
+            </Border>
+            <Rectangle 
+                Fill="White" 
+                HorizontalAlignment="Left"
+                Height="838" 
+                VerticalAlignment="Top" 
+                Width="796"
+                RadiusY="23"
+                RadiusX="23"/>
+            <linechart:LineChart 
+                x:Name="monthly_chart" 
+                Margin="50,136,12,0" 
+                Height="663" 
+                VerticalAlignment="Top"/>
+            <Border 
+                BorderThickness="0.5"
+                BorderBrush="#707070"
+                Grid.Row="0"
+                CornerRadius="23,23,0,0" 
+                Background="#F9F9F9" 
+                Margin="0,-1,0,753">
+                <Border.Effect>
+                    <BlurEffect/>
+                </Border.Effect>
+            </Border>
+            <TextBlock 
+                HorizontalAlignment="Left" 
+                Margin="50,26,0,0" 
+                TextWrapping="Wrap" 
+                Text="Income Overview" 
+                VerticalAlignment="Top"
+                FontFamily="Lato"
+                FontWeight="Bold"
+                FontSize="30"
+                Foreground="#0270FF"/>
+        </Grid>
+        <Button 
+            x:Name="dashboard_btn" 
+            Content="Dashboard" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Width="360" 
+            Margin="0,186,0,0" 
+            Height="63" 
+            FontSize="30"
+            FontFamily="Lato"
+            Click="dashboard_btn_Click"
+            Background="{x:Null}"
+            Foreground="White"
+            BorderBrush="{x:Null}"/>
+        <Grid Margin="1318,130,61,112">
+            <Border
+                BorderBrush="#707070"
+                BorderThickness="12"
+                CornerRadius="18">
+                <Border.Effect>
+                    <BlurEffect/>
+                </Border.Effect>
+            </Border>
+            <Rectangle 
+                Fill="White" 
+                HorizontalAlignment="Left"
+                Height="838" 
+                VerticalAlignment="Top" 
+                Width="499"
+                RadiusY="23"
+                RadiusX="23"/>
+            <Border 
+                BorderThickness="0.5"
+                BorderBrush="#707070"
+                Grid.Row="0"
+                CornerRadius="23,23,0,0" 
+                Background="#F9F9F9" 
+                Margin="0,0,0,753">
+                <Border.Effect>
+                    <BlurEffect/>
+                </Border.Effect>
+            </Border>
+            <TextBlock 
+                HorizontalAlignment="Left" 
+                Margin="50,26,0,0" 
+                TextWrapping="Wrap" 
+                Text="Earning" 
+                VerticalAlignment="Top"
+                FontFamily="Lato"
+                FontWeight="Bold"
+                FontSize="30"
+                Foreground="#0270FF"/>
+            <TextBlock 
+                x:Name="earning_text" 
+                HorizontalAlignment="Left" 
+                Margin="10,400,0,0" 
+                TextWrapping="Wrap" 
+                Text="Rp. 500000" 
+                VerticalAlignment="Top" 
+                FontSize="50" 
+                FontFamily="Lato"
+                Foreground="#0270FF"
+                FontWeight="Heavy"
+                FontStyle="Italic"
+                Height="76" 
+                Width="479"/>
+        </Grid>
+        <Button 
+            x:Name="history_btn_Copy" 
+            Content="History" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Width="360" 
+            Margin="0,288,0,0" 
+            Height="63" 
+            FontSize="30" 
+            FontFamily="Lato"
+            Click="history_btn_Click"
+            Background="{x:Null}"
+            Foreground="White"
+            BorderBrush="{x:Null}"
+            Opacity="0.7"/>
+        <Grid Margin="70,72,1590,959">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="23*"/>
+                <RowDefinition Height="26*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="53*"/>
+                <ColumnDefinition Width="166*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock 
+                FontFamily="Lato" 
+                Foreground="White" 
+                HorizontalAlignment="Left" 
+                TextWrapping="Wrap" 
+                Text="CUCI-IN" 
+                VerticalAlignment="Top" 
+                FontSize="40" 
+                Width="153"
+                FontWeight="Bold" 
+                Margin="12.333,0,0,0" Grid.Column="1" Grid.RowSpan="2"/>
+            <Image 
+                Source="/Cuciin-Dekstop;component/20201013_161153_0000.png" 
+                Stretch="Fill" 
+                Margin="0,0,3.667,0" Grid.RowSpan="2"/>
+        </Grid>
     </Grid>
 </basic:MyPage>
