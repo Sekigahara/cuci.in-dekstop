@@ -127,3 +127,8 @@ D:\Kuliah\Software\xampp\htdocs\cuci_in\cuci.in-dekstop\Cuciin-Dekstop\bin\Debug
 C:\Users\Sekigahara\source\repos\Cuciin-Dekstop\Cuciin-Dekstop\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Sekigahara\source\repos\Cuciin-Dekstop\Cuciin-Dekstop\obj\Debug\HistoryDetail\HistoryDetailFrame.g.cs
 C:\Users\Sekigahara\source\repos\Cuciin-Dekstop\Cuciin-Dekstop\obj\Debug\HistoryDetail\HistoryDetailFrame.baml
+C:\Users\Sekigahara\source\repos\Cuciin-Dekstop\Cuciin-Dekstop\bin\Debug\Cuciin-Dekstop.exe.manifest
+C:\Users\Sekigahara\source\repos\Cuciin-Dekstop\Cuciin-Dekstop\bin\Debug\Cuciin-Dekstop.application
+C:\Users\Sekigahara\source\repos\Cuciin-Dekstop\Cuciin-Dekstop\obj\Debug\Cuciin-Dekstop.TrustInfo.xml
+C:\Users\Sekigahara\source\repos\Cuciin-Dekstop\Cuciin-Dekstop\obj\Debug\Cuciin-Dekstop.exe.manifest
+C:\Users\Sekigahara\source\repos\Cuciin-Dekstop\Cuciin-Dekstop\obj\Debug\Cuciin-Dekstop.application

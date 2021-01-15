@@ -8,7 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("historydetail/background_nav.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("historydetail/logo_cuciin.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("logo-cuci-in.ico")]
 
 
