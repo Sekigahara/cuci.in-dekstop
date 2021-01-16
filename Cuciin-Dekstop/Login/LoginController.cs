@@ -23,7 +23,7 @@ namespace Cuciin_Dekstop.Login
 
         public async void OnLogin(string username, string password)
         {
-            ApiClient client = new ApiClient("http://127.0.0.1:8000/api/auth/");
+            ApiClient client = new ApiClient("https://api.cuci-in.me/api/auth/");
             var request = new ApiRequestBuilder();
 
             var req = request
@@ -35,47 +35,57 @@ namespace Cuciin_Dekstop.Login
             
             var response = await client.sendRequest(request.getApiRequestBundle());
 
-            if (response.getHttpResponseMessage().ReasonPhrase.Equals("OK"))
+            if(response.getHttpResponseMessage().ReasonPhrase != null)
             {
-                //assigning json object to User Model
-                User user = response.getParsedObject<User>();
-
-                //Set Endpoint
-                String ownerEndPoint = "owner/user_id/" + user.getData().getId().ToString();
-
-                //Request for owner id
-                var reqOwner = request
-                      .buildHttpRequest()
-                      .setEndpoint(ownerEndPoint)
-                      .setRequestMethod(HttpMethod.Get);
-
-                client.setAuthorizationToken(user.getData().getToken());
-                var responseOnOwner = await client.sendRequest(request.getApiRequestBundle());
-
-                if (responseOnOwner.getHttpResponseMessage().ReasonPhrase.Equals("OK"))
+                if (response.getHttpResponseMessage().ReasonPhrase.Equals("OK"))
                 {
-                    //assigning owner object to owner model
-                    Owner owner = responseOnOwner.getParsedObject<Owner>();
+                    //assigning json object to User Model
+                    User user = response.getParsedObject<User>();
 
-                    UtilProvider.initSession(user, owner, client);
-                    getView().callMethod("redirectToDashboard");
-                } else if (responseOnOwner.getHttpResponseMessage().ReasonPhrase.Equals("Not Found")) {
-                    MessageBox.Show("Your Account has Not Registered as Owner");
+                    //Set Endpoint
+                    String ownerEndPoint = "owner/user_id/" + user.getData().getId().ToString();
+
+                    //Request for owner id
+                    var reqOwner = request
+                          .buildHttpRequest()
+                          .setEndpoint(ownerEndPoint)
+                          .setRequestMethod(HttpMethod.Get);
+
+                    client.setAuthorizationToken(user.getData().getToken());
+                    var responseOnOwner = await client.sendRequest(request.getApiRequestBundle());
+
+                    if (responseOnOwner.getHttpResponseMessage().ReasonPhrase.Equals("OK"))
+                    {
+                        //assigning owner object to owner model
+                        Owner owner = responseOnOwner.getParsedObject<Owner>();
+
+                        UtilProvider.initSession(user, owner, client);
+                        getView().callMethod("redirectToDashboard");
+                    }
+                    else if (responseOnOwner.getHttpResponseMessage().ReasonPhrase.Equals("Not Found"))
+                    {
+                        MessageBox.Show("Your Account has Not Registered as Owner");
+                    }
+                    else
+                    {
+                        MessageBox.Show(responseOnOwner.getHttpResponseMessage().ReasonPhrase);
+                    }
+
+                }
+                else if (response.getHttpResponseMessage().ReasonPhrase.Equals("Unauthorized"))
+                {
+                    MessageBox.Show(FAILED_MESSAGE);
                 }
                 else
                 {
-                    MessageBox.Show(responseOnOwner.getHttpResponseMessage().ReasonPhrase);
+                    MessageBox.Show(response.getHttpResponseMessage().ReasonPhrase);
                 }
-                
-            }
-            else if(response.getHttpResponseMessage().ReasonPhrase.Equals("Unauthorized"))
-            {
-                MessageBox.Show(FAILED_MESSAGE);
             }
             else
             {
-                MessageBox.Show(response.getHttpResponseMessage().ReasonPhrase);
+                MessageBox.Show("Check Your Internect Connection");
             }
+            
         }
     }
 }
