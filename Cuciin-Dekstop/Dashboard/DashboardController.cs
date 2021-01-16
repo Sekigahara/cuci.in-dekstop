@@ -25,6 +25,8 @@ namespace Cuciin_Dekstop.Dashboard
             var request = new ApiRequestBuilder();
 
             String URL = "transaction/owner/" + UtilProvider.getSession().getUser().getData().getId();
+            MessageBox.Show(URL);
+
             var req = request
                       .buildHttpRequest()
                       .setEndpoint(URL)
@@ -78,7 +80,7 @@ namespace Cuciin_Dekstop.Dashboard
                 }
             }
 
-            UtilProvider.initDataTransaction(transaction); UtilProvider.initDataTransaction(transaction);
+            UtilProvider.initDataTransaction(transaction);
             getView().callMethod("generateChart");
         }
     }

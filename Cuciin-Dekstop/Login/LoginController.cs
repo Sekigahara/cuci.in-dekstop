@@ -23,7 +23,7 @@ namespace Cuciin_Dekstop.Login
 
         public async void OnLogin(string username, string password)
         {
-            ApiClient client = new ApiClient("http://127.0.0.1:8000/api/auth/");
+            ApiClient client = new ApiClient("https://api.cuci-in.me/api/auth/");
             var request = new ApiRequestBuilder();
 
             var req = request

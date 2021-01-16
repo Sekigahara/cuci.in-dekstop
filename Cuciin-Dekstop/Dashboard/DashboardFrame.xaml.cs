@@ -20,6 +20,7 @@ using Velacro.UIElements.TextBox;
 using Velacro.UIElements.TextBlock;
 using System.Globalization;
 using Cuciin_Dekstop.History;
+using Cuciin_Dekstop.AboutUs;
 
 namespace Cuciin_Dekstop.Dashboard
 {
@@ -92,6 +93,11 @@ namespace Cuciin_Dekstop.Dashboard
         private void dashboard_btn_Click(object sender, RoutedEventArgs e)
         {
             UtilProvider.getMainFrame().Navigate(new DashboardFrame());
+        }
+
+        private void about_us_btn_Click(object sender, RoutedEventArgs e)
+        {
+            UtilProvider.getMainFrame().Navigate(new AboutUsFrame());
         }
     }
 }

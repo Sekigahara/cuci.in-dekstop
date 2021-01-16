@@ -1,0 +1,30 @@
+﻿<basic:MyPage  xmlns:basic="clr-namespace:Velacro.UIElements.Basic;assembly=Velacro" x:Class="Cuciin_Dekstop.AboutUs.AboutUsFrame"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Cuciin_Dekstop.AboutUs"
+      mc:Ignorable="d" 
+      Title="HistoryDetail"   Height="1080" Width="1920" 
+      HorizontalAlignment="Stretch"
+      VerticalAlignment="Stretch">
+
+    <Grid RenderTransformOrigin="0.502,0.56">
+        <TextBlock HorizontalAlignment="Left" Margin="448,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="45" FontFamily="Roboto" FontWeight="Bold" Height="49"><Run Text="About Us"/><LineBreak/><Run/></TextBlock>
+        <Rectangle Height="1332" Stroke="Black" VerticalAlignment="Top" Margin="-541,-87,1593,-165" HorizontalAlignment="Right" Width="868">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="../Drawable/background_nav.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock HorizontalAlignment="Left" Margin="750,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="25" FontFamily="Roboto" FontWeight="Bold"/>
+        <Image HorizontalAlignment="Left" Height="50" Margin="62,69,0,0" VerticalAlignment="Top" Width="50" Source="../Drawable/logo_cuciin.png"/>
+        <Button x:Name="dashboard_btn" Content="DASHBOARD" HorizontalAlignment="Left" VerticalAlignment="Top" Width="238" Margin="62,163,0,0" Height="63" FontSize="30" Foreground="White" Click="dashboard_btn_Click" Background="Transparent" BorderBrush="Transparent" Opacity="0.7"/>
+        <Button x:Name="history_btn" Content="HISTORY" HorizontalAlignment="Left" VerticalAlignment="Top" Width="238" Margin="62,246,0,0" Height="63" FontSize="30" Foreground="White" Click="history_btn_Click" Background="Transparent" BorderBrush="Transparent" Opacity="0.7"/>
+        <Button x:Name="logout_btn" Content="LOGOUT" HorizontalAlignment="Left" VerticalAlignment="Top" Width="238" Margin="62,893,0,0" Height="63" FontSize="30" Foreground="White" Click="logout_btn_Click" Background="Transparent" BorderBrush="Transparent"/>
+        <TextBlock HorizontalAlignment="Left" Margin="132,73,0,0" TextWrapping="Wrap" Text="CUCI-IN" VerticalAlignment="Top" FontSize="40" FontFamily="Lato" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="522,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="35" FontFamily="Roboto" FontWeight="Bold" Height="646" Width="537"><Run Text=""/><LineBreak/><Run Text="Umi Sa'adah"/><LineBreak/><Run Text="Desy Intan Permatasari"/><LineBreak/><Run Text="Andhik Ampuh Yunanto"/><LineBreak/><Run Text="Maulidan Bagus Afridian Rasyid"/><LineBreak/><Run Text="Willy Achmat Fauzi"/><LineBreak/><Run Text="Verent Flourencia Irene"/><LineBreak/><Run Text="Mayshella Ainun Wakhidah"/><LineBreak/><Run Text="Andika Ahmad Ramadhan"/><LineBreak/><Run Text="Fandi Ahmad"/><LineBreak/><Run Text="Ardian Kristya Pratama"/><LineBreak/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="887,273,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="35" FontFamily="Roboto" FontWeight="Bold" Height="49" RenderTransformOrigin="0.509,-0.204"><Run FontSize="35" Text="Supervisors &amp; Mentors:"/><LineBreak/><Run/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="1284,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="35" FontFamily="Roboto" FontWeight="Bold" Height="646" Width="395"><Run Text=""/><LineBreak/><Run Text="Ahmad Jarir At Thobari"/><LineBreak/><Run Text="Ajie Dibyo Respati"/><LineBreak/><Run Text="Achmad Zulkarnain"/><LineBreak/><Run Text="Arie Affianto"/><LineBreak/><Run Text="Tegar Imansyah"/><LineBreak/><Run Text="Angga Pradipta Kurnia Putra"/><LineBreak/><Run Text="Muhammad Alif Pradipta ADP"/><LineBreak/><Run Text="Rafly Arief Kanza"/></TextBlock>
+        <Button x:Name="about_us_btn_Copy" Content="ABOUT US" HorizontalAlignment="Left" VerticalAlignment="Top" Width="238" Margin="62,332,0,0" Height="63" FontSize="30" Foreground="White" Click="about_us_btn_Click" Background="Transparent" BorderBrush="Transparent"/>
+    </Grid>
+</basic:MyPage>
