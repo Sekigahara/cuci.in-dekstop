@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cuciin-Dekstop.exe" size="728576">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Cuciin-Dekstop.exe" size="719872">
       <assemblyIdentity name="Cuciin-Dekstop" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>4y1KjNHr3JVI7J0bhBkBR3HgML1H8qsuQjGvuRXzhV4=</dsig:DigestValue>
+        <dsig:DigestValue>CqTztHlwBWXSn52pSAIxzN/IiJzIyPb25u8hlvCcaCw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
